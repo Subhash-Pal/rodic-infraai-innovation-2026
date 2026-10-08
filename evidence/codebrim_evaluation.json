@@ -1,0 +1,249 @@
+{
+  "report_metadata": {
+    "model_name": "CODEBRIM",
+    "model_task": "codebrim",
+    "evaluation_task": "multilabel",
+    "evaluation_timestamp": "2026-10-07T14:27:14.849264",
+    "device": "cpu",
+    "threshold": 0.5,
+    "validation_samples": 616
+  },
+  "checkpoint": {
+    "path": "/content/drive/MyDrive/rodic-poc-project/outputs/best_codebrim.pt",
+    "filename": "best_codebrim.pt"
+  },
+  "training": {
+    "epochs": 10,
+    "best_epoch": 6,
+    "best_validation_loss": 0.2069,
+    "train_samples": 6481,
+    "validation_samples": 616
+  },
+  "classes": [
+    "background",
+    "crack",
+    "spallation",
+    "efflorescence",
+    "exposed_bars",
+    "corrosion_stain"
+  ],
+  "runtime": {
+    "total_seconds": 87.06463575199996,
+    "samples": 616,
+    "throughput_images_per_second": 7.07520332083684,
+    "milliseconds_per_image": 141.33869440259733,
+    "measurement": "end_to_end_validation_pipeline"
+  },
+  "evaluation": {
+    "metrics": {
+      "subset_accuracy": 0.6915584415584416,
+      "micro_precision": 0.8598014888337469,
+      "micro_recall": 0.7983870967741935,
+      "micro_f1": 0.8279569892473119,
+      "macro_precision": 0.866001436781609,
+      "macro_recall": 0.7970264932576757,
+      "macro_f1": 0.8256017678598976
+    },
+    "per_class": {
+      "background": {
+        "precision": 0.875,
+        "recall": 0.98,
+        "f1": 0.9245283018867925,
+        "support": 150,
+        "true_negative": 445,
+        "false_positive": 21,
+        "false_negative": 3,
+        "true_positive": 147,
+        "roc_auc": 0.9962947067238913,
+        "pr_auc": 0.9891789864595486
+      },
+      "crack": {
+        "precision": 0.9375,
+        "recall": 0.7046979865771812,
+        "f1": 0.8045977011494253,
+        "support": 149,
+        "true_negative": 460,
+        "false_positive": 7,
+        "false_negative": 44,
+        "true_positive": 105,
+        "roc_auc": 0.9650776770188122,
+        "pr_auc": 0.923886072601546
+      },
+      "spallation": {
+        "precision": 0.848,
+        "recall": 0.7571428571428571,
+        "f1": 0.8,
+        "support": 140,
+        "true_negative": 457,
+        "false_positive": 19,
+        "false_negative": 34,
+        "true_positive": 106,
+        "roc_auc": 0.9510354141656664,
+        "pr_auc": 0.872070105577906
+      },
+      "efflorescence": {
+        "precision": 0.784,
+        "recall": 0.6950354609929078,
+        "f1": 0.7368421052631579,
+        "support": 141,
+        "true_negative": 448,
+        "false_positive": 27,
+        "false_negative": 43,
+        "true_positive": 98,
+        "roc_auc": 0.9337215378872713,
+        "pr_auc": 0.8410225904160747
+      },
+      "exposed_bars": {
+        "precision": 0.9827586206896551,
+        "recall": 0.8028169014084507,
+        "f1": 0.8837209302325582,
+        "support": 142,
+        "true_negative": 472,
+        "false_positive": 2,
+        "false_negative": 28,
+        "true_positive": 114,
+        "roc_auc": 0.9776401022166756,
+        "pr_auc": 0.9570076461343847
+      },
+      "corrosion_stain": {
+        "precision": 0.76875,
+        "recall": 0.8424657534246576,
+        "f1": 0.803921568627451,
+        "support": 146,
+        "true_negative": 433,
+        "false_positive": 37,
+        "false_negative": 23,
+        "true_positive": 123,
+        "roc_auc": 0.9516467502185951,
+        "pr_auc": 0.8852244250897202
+      }
+    },
+    "confusion_matrices": {
+      "background": {
+        "labels": [
+          "negative",
+          "positive"
+        ],
+        "matrix": [
+          [
+            445,
+            21
+          ],
+          [
+            3,
+            147
+          ]
+        ],
+        "true_negative": 445,
+        "false_positive": 21,
+        "false_negative": 3,
+        "true_positive": 147
+      },
+      "crack": {
+        "labels": [
+          "negative",
+          "positive"
+        ],
+        "matrix": [
+          [
+            460,
+            7
+          ],
+          [
+            44,
+            105
+          ]
+        ],
+        "true_negative": 460,
+        "false_positive": 7,
+        "false_negative": 44,
+        "true_positive": 105
+      },
+      "spallation": {
+        "labels": [
+          "negative",
+          "positive"
+        ],
+        "matrix": [
+          [
+            457,
+            19
+          ],
+          [
+            34,
+            106
+          ]
+        ],
+        "true_negative": 457,
+        "false_positive": 19,
+        "false_negative": 34,
+        "true_positive": 106
+      },
+      "efflorescence": {
+        "labels": [
+          "negative",
+          "positive"
+        ],
+        "matrix": [
+          [
+            448,
+            27
+          ],
+          [
+            43,
+            98
+          ]
+        ],
+        "true_negative": 448,
+        "false_positive": 27,
+        "false_negative": 43,
+        "true_positive": 98
+      },
+      "exposed_bars": {
+        "labels": [
+          "negative",
+          "positive"
+        ],
+        "matrix": [
+          [
+            472,
+            2
+          ],
+          [
+            28,
+            114
+          ]
+        ],
+        "true_negative": 472,
+        "false_positive": 2,
+        "false_negative": 28,
+        "true_positive": 114
+      },
+      "corrosion_stain": {
+        "labels": [
+          "negative",
+          "positive"
+        ],
+        "matrix": [
+          [
+            433,
+            37
+          ],
+          [
+            23,
+            123
+          ]
+        ],
+        "true_negative": 433,
+        "false_positive": 37,
+        "false_negative": 23,
+        "true_positive": 123
+      }
+    }
+  },
+  "responsible_ai": {
+    "confidence_interpretation": "Model output scores are treated as model confidence scores and are not claimed to be calibrated probabilities.",
+    "engineering_decision_boundary": "The system does not determine structural safety, structural capacity, remaining life, repair requirements, or engineering certification.",
+    "human_validation": "Consequential engineering decisions require qualified human validation."
+  }
+}

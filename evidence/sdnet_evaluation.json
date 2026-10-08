@@ -1,0 +1,84 @@
+{
+  "report_metadata": {
+    "model_name": "SDNET2018",
+    "model_task": "sdnet",
+    "evaluation_task": "binary",
+    "evaluation_timestamp": "2026-10-07T15:29:39.962570",
+    "device": "cpu",
+    "threshold": 0.5,
+    "validation_samples": 8413
+  },
+  "checkpoint": {
+    "path": "/content/drive/MyDrive/rodic-poc-project/outputs/best_sdnet.pt",
+    "filename": "best_sdnet.pt"
+  },
+  "training": {
+    "epochs": 10,
+    "best_epoch": 6,
+    "best_validation_loss": 0.1901,
+    "train_samples": 47679,
+    "validation_samples": 8413,
+    "evaluation_split_seed": 42,
+    "evaluation_split": "reconstructed_deterministic_split"
+  },
+  "classes": [
+    "no_crack",
+    "crack"
+  ],
+  "runtime": {
+    "total_seconds": 1484.039078789,
+    "samples": 8413,
+    "throughput_images_per_second": 5.668988182484483,
+    "milliseconds_per_image": 176.39832150112923,
+    "measurement": "end_to_end_validation_pipeline"
+  },
+  "evaluation": {
+    "metrics": {
+      "accuracy": 0.9528111256388921,
+      "precision": 0.8787085514834206,
+      "recall": 0.7960474308300395,
+      "f1": 0.8353380340107839,
+      "roc_auc": 0.964958052336705,
+      "pr_auc": 0.9059622378263452
+    },
+    "confusion_matrix": {
+      "labels": [
+        "no_crack",
+        "crack"
+      ],
+      "matrix": [
+        [
+          7009,
+          139
+        ],
+        [
+          258,
+          1007
+        ]
+      ],
+      "true_negative": 7009,
+      "false_positive": 139,
+      "false_negative": 258,
+      "true_positive": 1007
+    },
+    "per_class": {
+      "no_crack": {
+        "precision": 0.9644970414201184,
+        "recall": 0.9805540011191942,
+        "f1": 0.9724592438432189,
+        "support": 7148
+      },
+      "crack": {
+        "precision": 0.8787085514834206,
+        "recall": 0.7960474308300395,
+        "f1": 0.8353380340107839,
+        "support": 1265
+      }
+    }
+  },
+  "responsible_ai": {
+    "confidence_interpretation": "Model output scores are treated as model confidence scores and are not claimed to be calibrated probabilities.",
+    "engineering_decision_boundary": "The system does not determine structural safety, structural capacity, remaining life, repair requirements, or engineering certification.",
+    "human_validation": "Consequential engineering decisions require qualified human validation."
+  }
+}
