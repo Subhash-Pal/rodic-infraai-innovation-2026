@@ -2,6 +2,12 @@ import sys
 from pathlib import Path
 
 import streamlit as st
+
+APP_DIR = Path(__file__).resolve().parent
+DEPLOY_DIR = APP_DIR.parent
+
+if str(DEPLOY_DIR) not in sys.path:
+    sys.path.insert(0, str(DEPLOY_DIR))
 from rodic_vlm.gemini_vlm import analyze_image_with_gemini
 from rodic_inference.evidence_arbitration import build_inspection_evidence_record
 
@@ -10,11 +16,6 @@ from rodic_inference.evidence_arbitration import build_inspection_evidence_recor
 # ------------------------------------------------------------
 # Deployment paths
 # ------------------------------------------------------------
-APP_DIR = Path(__file__).resolve().parent
-DEPLOY_DIR = APP_DIR.parent
-
-if str(DEPLOY_DIR) not in sys.path:
-    sys.path.insert(0, str(DEPLOY_DIR))
 
 from rodic_inference.inference import (
     ingest_image_bytes,
